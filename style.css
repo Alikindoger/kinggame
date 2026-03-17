@@ -1,0 +1,21 @@
+body {
+    margin: 0;
+    overflow: hidden; /* Evita el scroll */
+    background-color: #222; /* Fondo oscuro */
+}
+
+canvas {
+    image-rendering: -moz-critp-edge; /* Firefox */
+    image-rendering: pixelated;       /* Chrome, Edge, Safari */
+    image-rendering: crisp-edges;
+}
+.jersey-10-regular {
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+body{
+     image-rendering: -moz-critp-edge;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+}
