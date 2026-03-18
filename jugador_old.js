@@ -39,12 +39,13 @@ export class Jugador extends Entidad {
         this.objetoEnfocado = null;
 
         this.input = {
-            pressed: {}, 
-            justPressed: {}
+            pressed: {},  // Teclas que están bajadas actualmente
+            justPressed: {} // Teclas que se acaban de pulsar en este instante
         };
 
         window.addEventListener("keydown", (e) => {
             const key = e.key.toLowerCase();
+            // Si la tecla no estaba ya pulsada, significa que se acaba de pulsar ahora
             if (!this.input.pressed[key]) {
                 this.input.justPressed[key] = true;
             }

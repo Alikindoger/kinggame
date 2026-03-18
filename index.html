@@ -9,47 +9,37 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="pantalla-carga" style="
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.9);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-family: 'monospace';
-    z-index: 1000;">
 
-    <div id="contenedor-login">
-    <h2>Entrar al Mundo</h2>
-    <input type="text" id="input-usuario" placeholder="Usuario">
-    <input type="password" id="input-pass" placeholder="Contraseña">
-    <button id="btn-conectar">Conectar</button>
-    <p id="error-login" style="color: red; display: none;"></p>
-    <div style = "text-align: center; padding-top: 10px;">
-        <input type="text" id="input-ip" placeholder="localhost">
+
+<div class="layout-principal" id="layout-principal">
+
+<div class="seccion-registro">
+        <div class="contenedor-form">
+            <h2>Crear Héroe</h2>
+            <input type="text" id="reg-usuario" placeholder="Nuevo Usuario">
+            <input type="email" id="reg-email" placeholder="Correo Electrónico">
+            <input type="password" id="reg-pass" placeholder="Contraseña">
+            <button class="btn-registro" id="btn-registrar">Registrarse</button>
+        </div>
     </div>
-    
-</div>
-    
-    <div class="spinner"></div>
-    <p id="mensaje-carga">Conectando con el Reino de Java...</p>
-</div>
 
-<style>
-    .spinner {
-        border: 4px solid rgba(255, 255, 255, 0.3);
-        border-radius: 50%;
-        border-top: 4px solid #ffffff;
-        width: 40px;
-        height: 40px;
-        animation: spin 1s linear infinite;
-        margin-bottom: 20px;
-    }
-    @keyframes spin { 0% {  transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-</style>
+    <div class="seccion-login">
+        <div id="contenedor-login">
+            <h2>Entrar al Mundo</h2>
+            <input type="text" id="input-usuario" placeholder="Usuario">
+            <input type="password" id="input-pass" placeholder="Contraseña">
+            <button id="btn-conectar">Conectar</button>
+            <p id="error-login" style="color: red; display: none;"></p>
+            <div style="text-align: center; padding-top: 10px;">
+                <input type="text" id="input-ip" placeholder="localhost">
+            </div>
+        </div>
+
+        <div class="spinner"></div>
+        <p id="mensaje-carga">Conectando con el Reino de Java...</p>
+    </div>
+
+</div>
     <canvas id="juegoCanvas"></canvas>
     <script type="module" src="game.js"></script>
 </body>

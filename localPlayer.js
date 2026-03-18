@@ -28,6 +28,7 @@ actualizar(teclas, canvas) {
             this.input.justPressed['e'] = false;
         }
 
+        // 3. Colisiones (Usando píxeles)
         if (!this.mapa.esSolido(this.x + movX, this.y, this.hitBoxX, this.hitBoxY)) {
             this.x += movX;
         }
@@ -63,7 +64,7 @@ actualizar(teclas, canvas) {
         
         this.objetoEnfocado = this.mapa.obtenerObjetoEnPixeles(frenteX, frenteY);
 
-
+        // 5. Animaciones
         if (moviendose) {
             this.estadoActual = 'WALK_' + nuevaDir;
             this.ultimaDireccion = nuevaDir;

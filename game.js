@@ -38,6 +38,13 @@ const inputUser = document.getElementById('input-usuario');
 const inputPass = document.getElementById('input-pass');
 const inputIp = document.getElementById('input-ip');
 
+//signin
+const btnSignIn = document.getElementById('btn-registrar');
+const inputRegUser = document.getElementById('reg-usuario');
+const inputRegEmail = document.getElementById('reg-email');
+const inputRegPass = document.getElementById('reg-pass');
+
+
 // --- ESTADO DEL JUEGO ---
 const TICKS_POR_SEGUNDO = 60;
 const TICK_TIME = 1000 / TICKS_POR_SEGUNDO;
@@ -50,6 +57,22 @@ export const mapa = new Mapa(TILE_SIZE,16,false);
 
 const interfaz = new Interfaz(32);
 
+btnSignIn.onclick = async () => {
+    const user = inputRegUser.value;
+    const email = inputRegEmail.value;
+    const pass = inputRegPass.value;
+
+    const ip = inputIp.value;
+    conn.url = "ws://"+ ip+":8080";
+    conn.conectar(); 
+
+    if(user && email && pass ){
+        await conn.esperarConexion();
+        
+        conn.enviar("REGISTRO",{usuario: user, email: email, password: pass});
+    }
+};
+
 btnConectar.onclick = async () => {
     const user = inputUser.value;
     const pass = inputPass.value;
@@ -61,8 +84,6 @@ btnConectar.onclick = async () => {
         await conn.esperarConexion(); 
         
         conn.enviar("LOGIN", { usuario: user, password: pass });
-    } else {
-        alert("Escribe usuario y contraseña");
     }
 };
 

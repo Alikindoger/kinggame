@@ -19,6 +19,7 @@ export class Cofre extends Interactuable {
 
             this.canInteract = false;
             console.log("¡Has encontrado una poción!");
+            // Aquí cambiarías el frame de la animación del cofre a "abierto"
         }
     }
 

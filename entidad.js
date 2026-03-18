@@ -2,9 +2,9 @@ export class Entidad {
     constructor(gridX, gridY, ancho, alto, rutaImagen) {
         this.gridX = gridX;
         this.gridY = gridY;
-        this.tileSize = 32; // tamaño casillas
+        this.tileSize = 32; // Tamaño de tus casillas
 
-        // x e y posicion en el mundo
+        // Posición real en el mundo (píxeles)
         this.x = gridX * this.tileSize;
         this.y = gridY * this.tileSize;
 

@@ -54,7 +54,7 @@ class Conection {
     
     Estado.jugador = new LocalPlayer(data.x, data.y, data.nombre, mapa);
     
-    document.getElementById('pantalla-carga').style.display = 'none';
+    document.getElementById('layout-principal').style.display = 'none';
     Estado.juegoIniciado = true;
     });
 

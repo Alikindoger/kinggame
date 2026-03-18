@@ -20,6 +20,7 @@ export class Button extends Interactuable {
         if (!this.pulsado) {
             this.pulsado = true;
             console.log("¡Has encontrado una poción!");
+            // Aquí cambiarías el frame de la animación del cofre a "abierto"
         }
     }
 
